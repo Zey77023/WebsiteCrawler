@@ -1,6 +1,7 @@
 # Web Crawler(Not Exactly!)
     As the header says, this is not exactly a web
     crawler, but a Web-Site crawler.
+    This program extracts all the links from a website!
 ## Code
     This program was written in python and it is a
     fairly small piece of code.
