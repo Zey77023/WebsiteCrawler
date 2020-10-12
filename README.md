@@ -137,7 +137,7 @@ if __name__ == "__main__":
 ## Build
     This program was built using pyinstaller, a python
     package which can be installed using
-```
+    ```
     pip install pyinstaller
     ```
 ## Info
