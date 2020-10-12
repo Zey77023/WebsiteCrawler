@@ -1,10 +1,3 @@
-# Web Crawler(Not Exactly!)
-    As the header says, this is not exactly a web
-    crawler, but a Web-Site crawler.
-## Code
-    This program was written in python and it is a
-    fairly small piece of code.
-```python
 import requests
 from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
@@ -133,18 +126,5 @@ if __name__ == "__main__":
     print("[+] Total Internal links:", len(internal_urls))
     print("[+] Total:", len(external_urls) + len(internal_urls))
     input("Press any key to exit...")
-```    
-## Build
-    This program was built using pyinstaller, a python
-    package which can be installed using
-```
-    pip install pyinstaller
-    ```
-## Info
-This is my first time in GitHub and my first project too.
 
-This might not work in the way you intend it to work so,
-feel free to make changes to the code and personalize it
-to your needs!
 
-**This repo will not be further maintained!(Pardon me if my grammar is bad)**
