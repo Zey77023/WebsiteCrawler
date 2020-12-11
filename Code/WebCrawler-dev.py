@@ -53,13 +53,7 @@ def get_all_website_links(url):
     #check for connection errors
         try:
             href = a_tag.attrs.get("href")
-        except ConnectionError or ConnectionResetError:
-            if not href == href1:
-                with open(filename+".txt","a") as f:
-                    try:
-                        print(f"{href}",file = f)
-                    except UnicodeEncodeError:
-                        continue
+        except ConnectionError or ConnectionResetError or UnicodeEncodeError:
             print(f"{RED} [#]Error Occured!")
             continue
         if href == "" or href is None:
@@ -72,6 +66,7 @@ def get_all_website_links(url):
         href = parsed_href.scheme + "://" + parsed_href.netloc + parsed_href.path
         if not is_valid(href):
             # not a valid URL
+			print(f"{RED} [#]Error Occured!")
             continue
         if href in internal_urls:
             # already in the set
@@ -84,6 +79,7 @@ def get_all_website_links(url):
                     try:
                         print(f"{href}",file = f)                        
                     except UnicodeEncodeError:
+						print(f"{RED} [#]Error Occured!")
                         continue
                 external_urls.add(href)
             continue
@@ -92,6 +88,7 @@ def get_all_website_links(url):
             try:
                 print(f"{href}",file = f)
             except UnicodeEncodeError:
+				print(f"{RED} [#]Error Occured!")
                 continue
         href1 = href
         urls.add(href)
