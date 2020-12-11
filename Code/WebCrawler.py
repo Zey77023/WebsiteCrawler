@@ -66,7 +66,7 @@ def get_all_website_links(url):
         href = parsed_href.scheme + "://" + parsed_href.netloc + parsed_href.path
         if not is_valid(href):
             # not a valid URL
-			print(f"{RED} [#]Error Occured!")
+            print(f"{RED} [#]Error Occured!")
             continue
         if href in internal_urls:
             # already in the set
@@ -77,9 +77,9 @@ def get_all_website_links(url):
                 print(f"{MAGENTA} [!] External link: {href}{RESET}")
                 with open(filename+".txt","a") as f:
                     try:
-                        print(f"{href}",file = f)                        
+                        print(f"{href}",file = f)
                     except UnicodeEncodeError:
-						print(f"{RED} [#]Error Occured!")
+                        print(f"{RED} [#]Error Occured!")
                         continue
                 external_urls.add(href)
             continue
@@ -88,7 +88,7 @@ def get_all_website_links(url):
             try:
                 print(f"{href}",file = f)
             except UnicodeEncodeError:
-				print(f"{RED} [#]Error Occured!")
+                print(f"{RED} [#]Error Occured!")
                 continue
         href1 = href
         urls.add(href)
